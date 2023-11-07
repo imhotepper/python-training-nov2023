@@ -43,3 +43,8 @@ for i in range(5):
 print()
 for i in range(2, 10, 2):
     print(i)
+
+# https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions
+i = 0
+while (i := i+1) < 10:  # walrus operator
+    print(i)
