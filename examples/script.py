@@ -34,8 +34,18 @@ print(
     my_shopping_list
 )
 
+# multiline string
 console_output = """Out[126]: 6.100000000000001
 x % 10 + x // 10 % 10 + int( x/100 % 10)
 Out[127]: 6"""
 
 print(console_output)
+
+str_with_newlines = "String on\ntwo lines"
+print(str_with_newlines)
+
+escape_newline = "String on\\ntwo lines"
+print(escape_newline)
+
+raw_string = r"String on\ntwo lines"
+print(raw_string)
