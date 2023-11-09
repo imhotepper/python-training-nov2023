@@ -11,12 +11,12 @@ from pypackage import pymodule
 pi = 3.14
 X = 999
 
-print(type(math), math.__name__, math.__doc__)
+print(type(math), math.__name__, math.__doc__, math.__file__)
 print(math.pi, math.sqrt(9))
 
 print(pi)
 
-print(type(functions), functions.__name__, functions.__doc__)
+print(type(functions), functions.__name__, functions.__doc__, functions.__file__)
 functions.greet("Anna")
 
 print(LEGB_X, X)
