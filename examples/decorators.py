@@ -1,4 +1,5 @@
 import functools
+from functions import decrement as original_decrement
 
 
 def decorator(func):
@@ -16,7 +17,7 @@ def ordinary():
     print("I am ordinary")
 
 
-# ordinary = decorator(ordinary)
+# ordinary = decorator(ordinary)  # @decorator above is equivalent with this line
 # print(ordinary)
 
 ordinary()  # decorator.<locals>.inner()
@@ -39,3 +40,12 @@ def add(a, b):
 
 print("Result of add(15, 13):", add(15, 13))
 print(add, add.__name__, add.__doc__)
+
+
+# Decorating an external function
+@decorator
+def decrement(nr, step=1):
+    return original_decrement(nr, step)
+
+
+print(decrement(10, 2))
