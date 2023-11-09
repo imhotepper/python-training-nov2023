@@ -10,3 +10,4 @@ print(compute(10, 2, pow))
 print(compute(10, 2, my_func))
 print(compute(10, 2, lambda x, y: x + y))
 print(compute(10, 2, lambda x, y: x * 2 + y // 2))
+
