@@ -99,6 +99,13 @@ if __name__ == "__main__":
     del p1.date_of_birth  # delete date_of_birth
     print(p1.date_of_birth)
 
+    attr = "name"
+    setattr(p1, attr, "Annabelle")
+    print(getattr(p1, attr))
+
+    print(getattr(p1, "greet"))
+    print(p1.greet)
+
     print("Age before set date_of_birth", p1.age)
     p1.date_of_birth = date(1988, 12, 4)
     print("Age after set date_of_birth", p1.age)
