@@ -1,7 +1,7 @@
 from datetime import date
 
 
-class Person:
+class Person(object):
     count = 0  # class attribute (variable shared across instances)
     MAX_YEAR = 1900
 
@@ -47,6 +47,20 @@ class Person:
         return Person(self.name, other.date_of_birth)
 
 
+class Student(Person):
+    def __init__(self, name, date_of_birth, university):
+        super().__init__(name, date_of_birth)
+        self.university = university
+
+    def __str__(self):
+        return (f"Student (name={self.name}; "
+                f"date_of_birth={self._date_of_birth}; "
+                f"university={self.university})")
+
+    def get_grade(self, subject):
+        return 8
+
+
 if __name__ == "__main__":
     p1 = Person("Anna", date(1989, 12, 4))
     p2 = Person(date_of_birth=date(1931, 6, 7), name="Mike")
@@ -88,3 +102,7 @@ if __name__ == "__main__":
     print("Age before set date_of_birth", p1.age)
     p1.date_of_birth = date(1988, 12, 4)
     print("Age after set date_of_birth", p1.age)
+
+    s1 = Student("Jane Smith", date(2004, 1, 5), "Politehnica București")
+    print(s1)
+    print(s1.get_grade("Math"))
